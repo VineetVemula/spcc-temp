@@ -32,11 +32,13 @@ class left_factoring{
 		String beta = prod1.substring(common_count, prod1.length());
 		String gama = prod2.substring(common_count, prod2.length());
 
+		String common_part = prod1.substring(0, common_count);
+
 		// System.out.println(beta);
 		// System.out.println(gama);
 
 		String new_variable = start_variable + "'";
-		String factored_prod1 = start_variable + "->" + start_variable + new_variable;
+		String factored_prod1 = start_variable + "->" + common_part + new_variable;
 		String factored_prod2 = new_variable + "->" + beta + "|" + gama;
 
 		System.out.println(factored_prod1);
